@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>File Size Converter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="theme-toggle">
+    <label>
+        <input type="checkbox" id="themeSwitcher" />
+        Dark/Light Mode
+    </label>
+  </div>
+ 
+  <div class="converter-container">
+    <h1>🗂️ File Size Converter</h1>
+
+    <div class="input-group">
+      <input type="number" id="inputValue" placeholder="Enter size" step="any" />
+      <select id="inputUnit">
+        <option value="B">Bytes</option>
+        <option value="KB">Kilobytes</option>
+        <option value="MB" selected>Megabytes</option>
+        <option value="GB">Gigabytes</option>
+        <option value="TB">Terabytes</option>
+      </select>
+    </div>
+
+    <button id="convertBtn">Convert</button>
+
+    <div id="results" class="results">
+      <!-- Conversion output will appear here -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  
+  <footer class="footer">
+    By Zohil Rahimzai 2025
+ </footer>
+
+</body>
+</html>

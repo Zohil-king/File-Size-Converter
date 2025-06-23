@@ -1,0 +1,164 @@
+/* Reset & Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #3c4223, #20c107);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.converter-container {
+  background: rgb(213, 204, 155);
+  padding: 30px 40px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  color: #ea0808;
+}
+
+.input-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+input[type="number"] {
+  padding: 10px;
+  width: 120px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+select {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button#convertBtn {
+  background-color: #537ca8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button#convertBtn:hover {
+  background-color: #0056b3;
+}
+
+.results {
+  margin-top: 25px;
+  text-align: left;
+  padding: 15px;
+  border-radius: 8px;
+  background: #f4f4f4;
+  border: 1px solid #ccc;
+}
+
+.results p {
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+body.dark {
+  background: #111;
+  color: #eee;
+}
+
+body.dark .converter-container {
+  background: #222;
+  color: #eee;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.05);
+}
+
+body.dark input,
+body.dark select {
+  background-color: #333;
+  color: #eee;
+  border: 1px solid #555;
+}
+
+body.dark .results {
+  background: #2a2a2a;
+  border-color: #444;
+  color: #eee;
+}
+
+body.dark #convertBtn {
+  background-color: #444;
+  color: #fff;
+}
+
+body.dark #convertBtn:hover {
+  background-color: #666;
+}
+
+.footer {
+  text-align: center;
+  padding: 12px 0;
+  font-size: 0.95rem;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  backdrop-filter: blur(4px);
+}
+
+body.dark .footer {
+  background: rgba(255, 255, 255, 0.1);
+  color: #eee;
+}
+
+/* Responsive container */
+.converter-container {
+  width: 90%;
+  max-width: 500px;
+  margin: 80px auto 60px auto;
+}
+
+/* Wrap input and select cleanly */
+.input-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Input and select full width on small screens */
+input[type="number"],
+select {
+  flex: 1 1 120px;
+  min-width: 120px;
+}
